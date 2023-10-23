@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1 {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.date-selection, .session-selection, .reservation-form {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.date-selection label, .session-selection label, .reservation-form label {
+  margin: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.date-selection input, .session-selection select, .reservation-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.seats {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  justify-content: center;
+  align-items: center;
+}
+
+.available-seats {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.available-seats:not(.disabled):hover {
+  background-color: #a5d6ce;
+}
+
+.error-message {
+  color: red;
+  display: none;
+}
+
+.no-sessions-message {
+  color: red;
+}
+
+.disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+form {
+  margin-top: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+button {
+  padding: 5px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #99abbe;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .date-selection, .session-selection, .reservation-form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Резервування квитків у кінотеатрі</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Резервування квитків у кінотеатрі</h1>
+  </header>
+  <main>
+    <div class="container">
+      <section class="seats">
+        <!-- Your seats will be posted here with JavaScript -->
+      </section>
+      <section class="info">
+        <section class="date-selection">
+          <label for="date">Оберіть дату:</label>
+          <input type="date" id="date" name="date">
+        </section>
+        <section class="session-selection">
+          <label for="session">Оберіть сеанс:</label>
+          <select id="session" name="session">
+            <!-- Options for sessions will be added using JavaScript -->
+          </select>
+        </section>
+        <section class="reservation-form">
+          <form>
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error-message">Пожалуйста, выберите места для бронирования.</div>
+            <button type="submit">Забронювати</button>
+          </form>
+        </section>
+      </section>
+    </div>
+  </main>
+  <script src="sessions.json"></script>
+  <script src="script.js"></script>
+</body>
+</html>
