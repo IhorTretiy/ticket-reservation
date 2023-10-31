@@ -1,4 +1,5 @@
 function setCookie(name, value) {
+	const currentDate = new Date();
 	const expirationDate = new Date(currentDate.getTime() + 7 * 24 * 60 * 60 * 1000);
 	const expires = "expires=" + expirationDate.toUTCString();
 	document.cookie = name + "=" + value + ";" + expires + ";path=/";
@@ -69,8 +70,9 @@ fetch('sessions.json')
 					option.textContent = session.time;
 					sessionSelect.appendChild(option);
 				});
-
-				errorMessage.style.display = 'none';
+				if (errorMessage) {
+					errorMessage.style.display = 'none';
+				}
 				updateSeats();
 			} else {
 				const noSessionsMessage = document.createElement('div');
